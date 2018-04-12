@@ -1148,6 +1148,12 @@ class ADORecordSet_postgres64 extends ADORecordSet{
 				case 'SERIAL':
 					return 'R';
 
+				case 'NUMERIC':
+				case 'DECIMAL':
+				case 'FLOAT4':
+				case 'FLOAT8':
+					return 'N';
+
 				default:
 					return ADODB_DEFAULT_METATYPE;
 			}
